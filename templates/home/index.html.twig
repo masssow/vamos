@@ -1,0 +1,807 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Association Lamp - accueil{% endblock %}
+
+{% block body %}
+<!-- ##### Header Area Start ##### -->
+    {# <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{{ path('app_home')}}" class="nav-brand"><img src="{{ asset('images/logo-ass.png')}}" alt="" style="max-width:100px; height:auto;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                                    <li><a href="{{ path('app_events')}}">Evénements</a></li>
+                                    <li><a href="{{ path('app_qui_sommes')}}">A propos</a></li>
+                                    <li><a href="{{ path('app_media')}}">Media</a></li>
+                                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    <a href="#">
+                                       <img src="{{ asset('images/partenaire3.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> #}
+<!-- ##### Header Area End ##### -->
+
+
+<!-- ##### Breaking News Area Start ##### -->
+    <section class="breaking-news-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Breaking News Widget -->
+                    <a href="{{ path('app_article')}}">
+                    <div class="breaking-news-ticker d-flex flex-wrap align-items-center">
+                        <div class="title">
+                            <h6>Lamp actu</h6>
+                        </div>
+                        <div id="breakingNewsTicker" class="ticker">
+                                    {% for article in article %}
+                            <ul>
+                                <li><a href="#">{{article.title}}</a></li>
+                                    {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ##### Breaking News Area End ##### -->
+
+
+<!-- ##### Hero Area Start ##### -->
+    <div class="hero-area">
+        <!-- Hero Post Slides -->
+        <div class="hero-post-slides owl-carousel">
+
+            <!-- Single Slide -->
+            <div class="single-slide">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Single Blog Post Area -->
+                        <div class="col-12 col-md-6">
+                            <div class="single-blog-post style-1" data-animation="fadeInUpBig" data-delay="100ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="#"><img src="{{asset('images/gabarit imagheader467x369.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date"></span>
+                                    <a href="#" class="post-title">L'association S'engage contre la précarité</a>
+                                </div>
+                            </div>
+                        </div>
+                               
+                        <div class="col-12 col-md-6">
+                            <!-- Single Blog Post Area -->
+                            <div class="single-blog-post style-1 mb-30" data-animation="fadeInUpBig" data-delay="300ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="#"><img src="{{asset('images/hdsmall.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">8 Mai 2023</span>
+                                    <a href="#" class="post-title">Journée d'hommage aux tiralleurs Sénégalais à Paris</a>
+                                </div>
+                            </div>
+                            <!-- Single Blog Post Area -->
+                            <div class="single-blog-post style-1" data-animation="fadeInUpBig" data-delay="500ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="#"><img src="{{asset('images/hdsmall2.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">8 Mai 2024</span>
+                                    <a href="#" class="post-title">Hommage aux tiralleurs preparatif édition 2024</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-slide">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Single Blog Post Area -->
+                        <div class="col-12 col-md-6">
+                            <div class="single-blog-post style-1" data-animation="fadeInUpBig" data-delay="100ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="{{path('app_events')}}"><img src="{{asset('images/gabarit imagheader467x369.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date"></span>
+                                    <a href="{{path('app_events')}}" class="post-title">L'association S'engage contre la précarité</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                            <!-- Single Blog Post Area -->
+                            <div class="single-blog-post style-1 mb-30" data-animation="fadeInUpBig" data-delay="300ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="{{path('app_events')}}"><img src="{{asset('images/hdsmall.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">8 Mai 2023</span>
+                                    <a href="{{path('app_events')}}" class="post-title">Journée d'hommage aux tiralleurs Sénégalais à Paris</a>
+                                </div>
+                            </div>
+                            <!-- Single Blog Post Area -->
+                            <div class="single-blog-post style-1" data-animation="fadeInUpBig" data-delay="500ms" data-duration="1000ms">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail bg-overlay">
+                                    <a href="{{path('app_events')}}"><img src="{{asset('images/hdsmall2.jpg')}}" alt=""></a>
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">8 Mai 2024</span>
+                                    <a href="#" class="post-title">Hommage aux tiralleurs preparatif édition 2024</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- ##### Hero Area End ##### -->
+
+{# ----####### News Area Start ########------ #}
+    <section class="intro-news-area section-padding-100-0 mb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Intro News Tabs Area -->
+                <div class="col-12 col-lg-8">
+                    <div class="intro-news-tab">
+
+                        <!-- Intro News Filter -->
+                        <div class="intro-news-filter d-flex justify-content-between">
+                            <h6>Actualités</h6>
+                        </div>
+
+                        <div class="tab-content" id="nav-tabContent">
+                                {# Boucle FOR EVENT #}
+                            <div class="tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav1">
+                                <div class="row">
+                                            {% for article in article %}
+                                           
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                {# <a href="#"><img src="{{ asset('images/asso12.jpg')}}" alt=""></a> #}
+                                                <a href="{{ path('app_article_detail', { 'slug' : article.id} ) }}"><img src="{{ asset('images/articles/' ~ article.imageName) }}" alt=""></a>
+
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">{{article.title}}</span>
+                                                {# <span class="post-date">June 20, 2018</span> #}
+
+                                                <a href="#" class="post-title">{{article.description}}</a>
+                                                {# <a href="#" class="post-title">Elon Musk: Tesla worker admitted to sabotage</a> #}
+                                                {# <a href="#" class="post-author">By Michael Smith</a> #}
+                                                <a href="#" class="post-author">{{article.publishedBy}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                        {% endfor %}
+                                    <!-- Single News Area -->
+                                    {# <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso9.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Elon Musk: Tesla worker admitted to sabotage</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>                                     #}
+
+                                                {% for article in article|reverse %}
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/articles/' ~ article.imageName)}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">{{article.date}}</span>
+                                                <a href="#" class="post-title">{{article.title}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                {% endfor %}
+                                    <!--Small Single News Area -->
+                                    {# <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/17.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div> #}
+
+                                </div>
+                            </div>
+                                    {# Fin boucle for evenement #}
+                                    {# boucle for article #}
+                            {# <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav2">
+                                <div class="row">
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso6.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Elon Musk: Tesla worker admitted to sabotage</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso10.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Rachel Sm ith breaks down while discussing border crisis</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/17.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/18.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Top bitcoin exchange says over $30 million stolen</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+
+                                                {# fin boucle for 
+                            <div class="tab-pane fade" id="nav-3" role="tabpanel" aria-labelledby="nav3">
+                                <div class="row">
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/6.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Elon Musk: Tesla worker admitted to sabotage</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso4.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Rachel Sm ith breaks down while discussing border crisis</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso5.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/17.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+
+                                    {# fin boucle for article 
+                                    {# fin boucle for mission (communauté) 
+
+                            <div class="tab-pane fade" id="nav-4" role="tabpanel" aria-labelledby="nav4">
+                                <div class="row">
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso3.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Elon Musk: Tesla worker admitted to sabotage</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso6.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Rachel Sm ith breaks down while discussing border crisis</a>
+                                                <a href="#" class="post-author">By Michael Smith</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/16.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/asso9.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> #}
+                                                    {# fin boucle for mission #}
+                        </div>
+                    </div>
+                </div>
+
+                <!--PUB lateral Sidebar Widget -->
+                <div class="col-12 col-sm-9 col-md-6 col-lg-4">
+                    <div class="sidebar-area">
+
+                        <!-- Newsletter Widget -->
+                        <div class="single-widget-area newsletter-widget mb-30">
+                            <h4>Ecrivez Nous !</h4>
+                            {{form_start(contact)}}
+                                {# <input type="email" name="nl-email" id="nlemail" placeholder="Your E-mail"> #}
+                               
+                                {{form_widget(contact)}}
+                           
+                            <p class="mt-30">Vous avez une question, une sugestion ? </br>
+                            Vous souhaitez colaborer avec nous, devenir Bénévole ?
+                            Nous avons hate d'échanger avec vous .
+                            </p>
+                            <button type="submit" class="btn newsbox-btn w-100">Envoyer</button>
+
+                             {{form_end(contact)}}
+                        </div>
+
+                        <!-- Add Widget -->
+                        <div class="single-widget-area add-widget mb-30">
+                            <a href="#">
+                                <img src="{{asset('images/add3.png')}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ##### Intro News Area End ##### -->
+
+
+    <!-- ##### Video Area Start ##### -->
+    {# <section class="video-area bg-img bg-overlay bg-fixed" style="background-image: url(img/bg-img/10.jpg);">
+        <div class="container">
+            <div class="row">
+                <!-- Featured Video Area -->
+                <div class="col-12">
+                    <div class="featured-video-area d-flex align-items-center justify-content-center">
+                        <div class="video-content text-center">
+                            <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                            <span class="published-date">June 20, 2018</span>
+                            <h3 class="video-title">Traffic Problems in Time Square</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Slideshow -->
+        <div class="video-slideshow py-5">
+            <div class="container">
+                <div class="row">
+                {% for video in video %}
+                    <div class="col-12">
+                        <!-- Video Slides -->
+                        <div class="video-slides owl-carousel">
+                            <!-- Single News Area -->
+                            <div class="single-blog-post style-3">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail">                           
+                                  <iframe></iframe>
+                                    <a href="#" class=""><video controls width="450px"></source src="{{ asset('images/videos/' ~ video.imageName)}}" type="video/mp4"></video></a>
+                                    
+                                </div>
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">{{ video.title}}</span>
+                                    <p class="post-title">{{video.description}}</p>
+                                    <a href="#" class="post-author">{{video.publishedBy}}</a>
+                                </div>
+                            </div>
+                                {% endfor %}
+                            {# <!-- Single News Area -->
+                            <div class="single-blog-post style-3">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail">
+                
+                                    <a href="#"><iframe width="560" height="315" src="https://www.youtube.com/embed/VuqIX65NHaI?si=ZM6EwicHO9-Xa4c2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a>
+                                    {# <a href="#" ><i clas'*ùùmp*s="fa fa-play" aria-hidden="true"></i></a> 
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">June 20, 2018</span>
+                                    <p class="post-title">Rachel Sm ith breaks down while discussing border crisis </p>
+                                    <a href="#" class="post-author">By Michael Smith</a>
+                                </div>
+                            </div>
+
+                            <!-- Single News Area -->
+                            <div class="single-blog-post style-3">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail">
+                                    <a href="#" ><iframe width="560" height="315" src="https://www.youtube.com/embed/_ocpRUj3Uas?si=xsgW9rfqZcpLEYV9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a>
+                                    {# <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a> 
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">June 20, 2018</span>
+                                    <p class="post-title">Elon Musk: Tesla worker admitted to sabotage</p>
+                                    <a href="#" class="post-author">By Michael Smith</a>
+                                </div>
+                            </div>
+
+                            <!-- Single News Area -->
+                            <div class="single-blog-post style-3">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail">
+                                    <a href="#"><iframe width="560" height="315" src="https://www.youtube.com/embed/X0-ER6Jkom4?si=YKweYGq_PZqtj8P-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a>
+                                    {# <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a> 
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">June 20, 2018</span>
+                                    <p class="post-title">Rachel Sm ith breaks down while discussing border crisis </p>
+                                    <a href="#" class="post-author">By Michael Smith</a>
+                                </div>
+                            </div>
+
+                            <!-- Single News Area -->
+                            <div class="single-blog-post style-3">
+                                <!-- Blog Thumbnail -->
+                                <div class="blog-thumbnail">
+                                    <a href="#"><iframe width="560" height="315" src="https://www.youtube.com/embed/X0-ER6Jkom4?si=YKweYGq_PZqtj8P-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a>
+                                    {# <a href="#" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a> 
+                                </div>
+
+                                <!-- Blog Content -->
+                                <div class="blog-content">
+                                    <span class="post-date">June 20, 2018</span>
+                                    <p class="post-title">Dow falls 287 points as trade war fears escalate</p>
+                                    <a href="#" class="post-author">By Michael Smith</a>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> #}
+    <!-- ##### Video Area End ##### -->
+
+
+    <!-- ##### Top Event Area Start ##### -->
+    <div class="top-news-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <!-- Single Event Area -->
+                {% for event in event %}
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-blog-post style-2 mb-5">
+                        <!-- Blog Thumbnail -->
+                        <div class="blog-thumbnail">
+                            <a href="#"><img src="{{ asset('images/events/' ~ event.imageName)}}" alt=""></a>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <span class="post-date">{{event.day}}</span>
+                            <span class="post-date">{{event.month}}</span>
+                            <span class="post-date">{{event.year}}</span>
+
+                            <a href="#" class="post-title">{{event.title}}</a>
+                            <a href="#" class="post-author">{{event.organizedBy}}</a>
+                        </div>
+                    </div>
+                </div>
+                                {% endfor %}
+
+                <div class="col-12">
+                    <div class="load-more-button text-center">
+                        <a href="#" class="btn newsbox-btn">Load More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Top News Area End ##### -->
+
+    <!-- ##### Add Area Start ##### -->
+    <div class="big-add-area mb-100">
+        <div class="container-fluid">
+            <a href="#"><img src="img/bg-img/add2.png" alt=""></a>
+        </div>
+    </div>
+    <!-- ##### Add Area End ##### -->
+
+
+
+
+
+
+
+
+
+
+
+{# <div class="container-fluid"> 
+    {# <video autoplay muted loop class="vid">
+            <source src="images/production.mp4" type="video/mp4">
+        </video>   
+    <section>
+            <div class="row home">
+                <div class="col-lg-6 my-4 nous landing-head">
+                    <a href="{{ path('app_qui_sommes')}}" class="lien-landing"><h2 class="lien-titre">qui sommes nous?</h2>
+                    <p class="lien-present">L'association Lamp Paris est au service de plus défavorises... </p></a>
+                </div>
+                <div class=" col-lg-6 my-4 mission landing-head">
+                    <a href="{{ path('app_mission')}}" class="lien-landing"><h2 class="lien-titre" id="mission-titre">Notre mission</h2></a>
+                    <a href="{{ path('app_mission')}}" class="mission-home">
+                    <p class="lien-present" id="mission-text">
+                    L'association est au service de la population et l'intégration social notamment des immigrés.
+                   <strong>Savoir plus...</strong> 
+                    </p></a>
+                </div>
+                <div class="col-lg-6 my-4 soutient landing-head">
+                    <a href="{{ path('app_agir')}}"  class="lien-landing">
+                    <h2 class="lien-titre-agir">Agir avec nous pour le développement humain</h2>
+                    </a>
+                </div>
+                <div class="col-lg-6 my-4 actu landing-head">
+                    <img src="#" alt="">
+                    <a href="{{ path('app_article')}}" class="lien-landing"> <h2 class="lien-titre " >Actualités</h2></a> 
+                    {% for article in article %}
+                    <h3>{{ article.title}}</h3>
+                    <p class="para-present">{{ article.description}}
+                    {% endfor %}
+                    <a href="{{ path('app_article')}}">Savoir plus...</a>
+                    </p>    
+                </div>
+            </div>{# .row 
+            
+    </section>
+    <section>
+        <div class="row mt-5">
+            <h2 id="event-titre">Evenements</h2>
+                {% for event in event %}
+                <div class="col-lg-4 event">
+                    <h3 class="titre-event">{{ event.title}}</h3> 
+                    <img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid image-event">
+                    <div class="date ">
+                            <div class="dateRight">
+                                <div id="number">{{event.day}}</div>
+                                <div id="dateText">
+                                <div id="mois">{{event.month}}</div>    
+                                <div id="anee">{{event.year}}</div>
+                            </div>
+                    </div>
+                </div> 
+
+                
+                    <a href="{{ path('app_event_detail', {'slug': event.id} )}}">
+                        <span class="btn btn-dark my-2">Savoir +</span>
+                    </a>  
+        </div>
+                {% endfor %}
+                <div class="d-grid gap-2 d-md-block mx-auto mb-5">
+
+                    <a href="{{ path('app_events')}}" class="btn btn-secondary d-grid gap-2 col-2 mx-auto my-3">Voir tous les evenements</a>
+                </div>
+        </div>
+    </section>
+    <div class="soutient-2">
+        <img src="#" alt="" height=""> 
+        <h2 id="agir-titre">Nous soutenir</h2>
+        <a href="https://www.helloasso.com/associations/association-lamp-pour-le-developpement-du-senegal/formulaires/1" target="_blank" class="don-li"><span class="don">Faire un don</span></a>
+    </div>
+    <div class="contact">
+        <div class="content-contact">
+            <h2>Nous contacter</h2>
+            <p>21 Avenue de l'Italie<br>
+                    75012 Paris<br>
+                    France
+            </p>
+                <h3>Connectez vous avec nous</h3>
+            <div class="reseau-s">
+                <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+                <a href="https://twitter.com/fall84568676" target="_blank"><div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div></a>
+            </div>
+        </div>
+    </div>
+    <div class="permanances">
+    <img src="{{ asset('images/permanancesasso.jpg')}}" alt="" class=" img-fluid mx-auto d-block">
+</div>
+</div> #}
+{% endblock %}

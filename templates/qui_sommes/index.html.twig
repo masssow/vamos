@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Association Lamp - Qui sommes nous{% endblock %}
+
+{% block body %}
+{# <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{{ path('app_home')}}" class="nav-brand"><img src="{{ asset('images/logo-ass.png')}}" alt="" style="max-width:100px; height:auto;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                                    <li><a href="{{ path('app_events')}}">Evénements</a></li>
+                                    <li><a href="{{ path('app_qui_sommes')}}">A propos</a></li>
+                                    <li><a href="{{ path('app_media')}}">Media</a></li>
+                                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    <a href="#">
+                                       <img src="{{ asset('images/partenaire3.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- ##### Header Area End ##### --> #}
+
+<div class="container-fluid">
+<div class="header-custom hc-nous">
+</div>
+<h2 class="titre-prin-pag">Qui sommes nous?</h2>
+<div class="row my-5">
+<div class="col-md-5">
+<img id="log"src="{{ asset('images/logo-ass.png')}}" alt="logo Association" class="img-fluid d-block mx-auto imag-nous">
+</div>
+<div class="col-md-7 align-self-center text-center">
+<p class="para-present">L'association Lamp Paris est au service de plus défavorises notamment les immigrés. 
+Elle les assiste et les oriente dans ces domaines d'interventions.</p>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-5 my-4">
+<img src="{{ asset('images/president_asso.jpg')}}" alt="logo Association" class="img-fluid d-block mx-auto imag-nous">
+</div>
+
+<div class="col-md-7 align-self-center">
+
+<p class="para-present"><strong>LAMP POUR LE DEVELOPPEMENT DU SENEGAL</strong> est né le 13 Octobre 2010 à Paris, à l’initiative de ressortissants sénégalais expatriés, soucieux de contribuer au rayonnement et au développement économique et culturel du Sénégal dans le monde.
+
+    
+    Serigne Cheikh Khady Fall, le président d’honneur, fut adopté le 5 Mai 2011 a l’issue d'’une assemblée extraordinaire de l’association, engagé à aider les plus démunis et à leur intégration sociale, notamment pour les immigrés. Toujours dans la première ligne d'action</p>
+</div>
+</div>
+</div>
+{% endblock %}

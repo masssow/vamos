@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Association Lamp - Evenements{% endblock %}
+
+
+{% block body %}
+{# <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{{ path('app_home')}}" class="nav-brand"><img src="{{ asset('images/logo-ass.png')}}" alt="" style="max-width:100px; height:auto;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                                    <li><a href="{{ path('app_events')}}">Evénements</a></li>
+                                    <li><a href="{{ path('app_qui_sommes')}}">A propos</a></li>
+                                    <li><a href="{{ path('app_media')}}">Media</a></li>
+                                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    <a href="#">
+                                       <img src="{{ asset('images/partenaire3.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- ##### Header Area End ##### --> #}
+
+<div class="container-fluid">
+<div class="header-custom hc-evenements">
+</div>
+<h2 class="titre-prin-pag"> Evenements</h2>
+
+<div class="row my-5">
+{% for event in events %}
+<div class="col-lg-4 event">
+<h2 class="titre-event">{{ event.title}}</h2>  
+<div class="date">
+<div class="dateRight">
+<div id="number">{{event.day}}</div>
+<div id="dateText">
+<div id="mois">{{event.month}}</div>    
+<div id="anee">{{event.year}}</div>
+</div> 
+</div>
+</div>  
+<a href="{{ path('app_event_detail', {'slug' : event.id} )}}">
+<img src="{{ asset('images/events/' ~ event.imageName)}}" alt="{{ event.title}}" class="img-fluid mx-auto d-block" height="100px">
+</a>
+<p class="para-present">{{ event.description}}</p>
+</div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
+
+

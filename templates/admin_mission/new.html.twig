@@ -1,0 +1,12 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}Nouvelle Mission{% endblock %}
+
+{% block body %}
+<a href="{{ path('app_admin_mission_index') }}" class="btn btn-sm btn-secondary float-end my-3">Retour</a>
+
+    <h1 class="my-4">Crée une nouvelle Mission</h1>
+
+    {{ include('admin_mission/_form.html.twig') }}
+
+{% endblock %}

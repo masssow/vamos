@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block title %}Association Lamp - Nos missions{% endblock %}
+
+{% block body %}
+<!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{{ path('app_home')}}" class="nav-brand"><img src="{{ asset('images/logo-ass.png')}}" alt="" style="max-width:100px; height:auto;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                                    <li><a href="{{ path('app_events')}}">Evénements</a></li>
+                                    <li><a href="{{ path('app_qui_sommes')}}">A propos</a></li>
+                                    <li><a href="{{ path('app_media')}}">Media</a></li>
+                                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    <a href="#">
+                                       <img src="{{ asset('images/partenaire3.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- ##### Header Area End ##### -->
+
+<div class="container-fluid">
+<div class="header-custom hc-mission">
+</div>
+<h2 class="titre-prin-pag">Nos missions</h2>
+
+{% for mission in mission %}
+<div class="row my-5"><div class="col-md-5">
+<img src="{{ asset('images/mission/' ~ mission.imageName )}}" alt="{{ mission.title}}" class="img-fluid mx-auto d-block my-3 image-mission">
+</div>
+<div class="col-md-7 align-self-center">
+<h3 class="mb-2 text-center">{{ mission.title}}</h3>
+<a href="{{ path('app_article_detail', { 'slug': mission.id} )}}" class="art-text"><p class="para-present">{{ mission.description}}</p></a>
+</div>
+
+</div>
+
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Association Lamp - actualités{% endblock %}
+
+{% block body %}
+{# <div class="container-fluid">
+<div class="header-custom hc-actu">
+</div>
+<h2 class="titre-prin-pag">Dernières actualités</h2>
+
+{% for article in article %}
+<div class="row my-5"><div class="col-md-5">
+<img src="{{ asset('images/articles/' ~ article.imageName )}}" alt="{{ article.title}}" class="img-fluid mx-auto d-block my-3 image-article">
+</div>
+<div class="col-md-7 align-self-center">
+<h3 class="mb-2 text-center">{{ article.title}}</h3>
+<a href="{{ path('app_article_detail', { 'slug': article.id} )}}" class="art-text"><p class="para-present">{{ article.description}}</p></a>
+<span> publiée par: {{article.publishedBy}}</span>
+</div>
+
+</div>
+
+
+{% endfor %}
+</div>
+</div> #}
+
+<!-- ##### Intro News Area Start ##### -->
+    <section class="intro-news-area section-padding-100-0 mb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Intro News Tabs Area -->
+                <div class="col-12 col-lg-8">
+                    <div class="intro-news-tab">
+
+                        <!-- Intro News Filter -->
+                        <div class="intro-news-filter d-flex justify-content-between">
+                            <h6>Dernières actualités</h6>
+                        </div>
+
+                        <div class="tab-content" id="nav-tabContent">
+                                {# Boucle FOR EVENT #}
+                            <div class="tab-pane fade show active" id="nav-1" role="tabpanel" aria-labelledby="nav1">
+                                <div class="row">
+                                            {% for article in article|reverse %}
+                                    <!-- Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post style-2 mb-5">
+                                            <!-- Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                 <a href="{{ path('app_article_detail', { 'slug' : article.id} ) }}"><img src="{{ asset('images/articles/' ~ article.imageName) }}" alt=""></a>
+                                            </div>
+
+                                            <!-- Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">{{ article.title}}</span>
+                                                <a href="#" class="post-title">{{article.description}}</a>
+                                                <a href="#" class="post-author">{{article.publishedBy}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                {% endfor %}                           
+                                    {# <!--Small Single News Area -->
+                                    <div class="col-12 col-sm-6">
+                                        <div class="single-blog-post d-flex style-4 mb-30">
+                                            <!--Small Blog Thumbnail -->
+                                            <div class="blog-thumbnail">
+                                                <a href="#"><img src="{{ asset('images/17.jpg')}}" alt=""></a>
+                                            </div>
+
+                                            <!--Small Blog Content -->
+                                            <div class="blog-content">
+                                                <span class="post-date">June 20, 2018</span>
+                                                <a href="#" class="post-title">Nearly a quarter have no emergency savings</a>
+                                            </div>
+                                        </div>
+                                    </div> #}
+                                </div>
+                            </div>
+                                    
+                        </div>
+                    </div>
+                </div>
+
+                <!--PUB lateral Sidebar Widget -->
+                <div class="col-12 col-sm-9 col-md-6 col-lg-4">
+                    <div class="sidebar-area">
+
+                        <!-- Newsletter Widget -->
+                        <div class="single-widget-area newsletter-widget mb-30">
+                            <h4>Ecrivez nous</h4>
+                            <form action="#" method="post">
+                                <input type="email" name="nl-email" id="nlemail" placeholder="Your E-mail">
+                                <button type="submit" class="btn newsbox-btn w-100">Subscribe</button>
+                            </form>
+                            <p class="mt-30">Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh . volutpat lobortis.</p>
+                        </div>
+
+                        <!-- Add Widget -->
+                        <div class="single-widget-area add-widget mb-30">
+                            <a href="#">
+                                <img src="{{asset('images/add3.png')}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ##### Intro News Area End ##### -->
+
+
+
+{% endblock %}
+

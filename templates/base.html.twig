@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="description"content="l'Association lamp assiste et oriente à la population dans ce domaines d'interventions notamment les immigrés">
+        <title>{% block title %}Association Lamp{% endblock %}</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo-ass.png')}}">
+            <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/classy-nav.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
+            <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
+
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %} {% endblock %}
+
+    </head>
+    <body>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+    <!-- ##### Header Area Start ##### -->
+     <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{{ path('app_home')}}" class="nav-brand"><img src="{{ asset('images/logo-ass.png')}}" alt="" style="max-width:100px; height:auto;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('app_home')}}">Accueil</a></li>
+                                    <li><a href="{{ path('app_events')}}">Evénements</a></li>
+                                    <li><a href="{{ path('app_qui_sommes')}}">A propos</a></li>
+                                    <li><a href="{{ path('app_media')}}">Media</a></li>
+                                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    <a href="#">
+                                       <img src="{{ asset('images/partenaire3.jpg')}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <!-- ##### Header Area End ##### -->
+        {% block body %}{% endblock %}
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Footer Logo -->
+        <div class="footer-logo mb-100">
+            <a href="index.html"><img src="{{ asset('images/logo-ass.png')}}" style="max-width:150px; heigth:auto;" alt=""></a>
+        </div>
+        <!-- Footer Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content text-center">
+                        <!-- Footer Nav -->
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">Nous contacter</a></li>
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Mentions légals</a></li>
+                            </ul>
+                        </div>
+                    <!-- Social Info -->
+                        <div class="footer-social-info">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="pinterest"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="twitter"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="dribbble"><i class="fa-brands fa-x-twitter"></i></a>
+                            {# <a href="#" data-toggle="tooltip" data-placement="top" title="behance"><i class="fa fa-behance" aria-hidden="true"></i></a> #}
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    <!-- Social Info end-->
+
+                        <p class="mb-15">Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iaculis. Proin ac urna at lectus volutpat lobortis. Vestibulum venenatis iaculis diam vitae lobortis. Donec tincidunt viverra elit, sed consectetur est pr etium ac. Mauris nec mauris tellus. </p>
+
+                        <!-- Copywrite Text -->
+                        <p class="copywrite-text"><a href="#">
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <!-- Popper js -->
+    <script src="{{ asset('js/bootstrap/popper.min.js')}}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ asset('js/bootstrap/bootstrap.min.js')}}"></script>
+    <!-- All Plugins js -->
+    <script src="{{ asset('js/plugins/plugins.js')}}"></script>
+    <!-- Active js -->
+    <script src="{{ asset('js/active.js')}}"></script>        
+     
+            {# <footer>
+                <div class="footer-custom row">
+                <div class="col-md-3 mt-3 text-center">
+                <a href="{{ path('app_home')}}">
+                <img src={{ asset("images/logo-ass.png") }} alt="Logo de l'association" height="100px" class="mb-3">
+                </a>
+                <strong><p class="foo-li">Association Lamp Paris <br>
+                19 Avenue de l'Italie 75013 Paris<br></p></strong>
+                </p><br> 
+                    <p class="foo-li">Lamp Paris est une association de loi 1901. Chaque don ouvre droit à une réduction d’impôts égale à 66% du montant du don, dans la limite de 20% de votre revenu imposable.
+                    </p><br>
+                </div>
+            <div class="liens col-md-4 mt-5 text-center">
+                <h6 class="">Liens utiles:</h6>
+            <ul class="list-foo ">
+        <li class="foo-li"><a class="lie-li" href="https://ameli.fr/" target="_blank">- Assurance maladie</a></li>
+        <li class="foo-li" ><a class="lie-li" href="https://www.caf.fr/" target="_blank">- Caf</a></li>
+        <li class="foo-li"><a class="lie-li" href="https://www.impots.gouv.fr/accueil" target="_blank">- Finances publiques</a></li>
+        <li class="foo-li"><a class="lie-li" href="https://www.pole-emploi.fr/accueil/" target="_blank">- Pôle emploi</a></li>
+        <li class="foo-li"><a class="lie-li" href="https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/representations-etrangeres-en-france/" target="_blank">- Représentations étrangères</a></li>
+        </ul>
+        <img src="{{asset('images/logo-1901.jpg')}}" alt="Association à but non lucratif" class="logo-1901 img-fluid mx-auto d-block" >
+        
+    </div>
+    <div class="col-md-4 text-center mt-5">
+            <ul class="list-foo">
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_article')}}">- Actualités</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_events')}}">- Evenements</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_contact')}}">- Contact</a></li>
+            <li class="foo-li"><a class="lie-li" href="{{ path('app_c_g_u')}}">- CGU (Conditions Générales d'Utilisation)</a></li>
+            </ul>
+            <div class="reseau-foot">
+            <a href="https://www.facebook.com/search/top?q=association%20lamp" target="_blank"> <div class="reseau"><img src="images/facebook.png" alt="" height="40px"></div></a>
+            <a href="https://twitter.com/fall84568676"><div class="reseau"><img src="images/twitter.png" alt=""  height="40px"></div></a>
+        </div>
+        </div>
+        
+    <p class="t-foo text-center"><img src="{{asset('images/droits-dauteur.png')}}" alt="" height="12px"> 2022 <strong>Association Lamp</strong>. Tout les droits réservés</p> 
+</div>  {# .footer-custom .row 
+</footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="{{ asset('js/menu.js')}}"></script>
+<script src="{{ asset('js/slide.js')}}"></script>
+<script src="{{ asset('js/accordion.js')}}"></script> #}
+
+    {% block javascripts %}{% endblock %}
+
+</body>
+</html>
+
